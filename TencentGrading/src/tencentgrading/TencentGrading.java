@@ -5,6 +5,7 @@
  */
 package tencentgrading;
 
+import GUI.TencentGRading;
 /**
  *
  * @author Windows10
@@ -15,7 +16,7 @@ public class TencentGrading {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        new TencentGRading().setVisible(true);
     }
     
 }
