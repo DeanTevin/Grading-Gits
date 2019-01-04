@@ -5,6 +5,8 @@
  */
 package GUI;
 
+import java.awt.event.KeyEvent;
+
 /**
  *
  * @author Windows10
@@ -37,7 +39,6 @@ public class TencentGRading extends javax.swing.JFrame {
         jTextField5 = new javax.swing.JTextField();
         jTextField6 = new javax.swing.JTextField();
         jTextField7 = new javax.swing.JTextField();
-        Percentage = new javax.swing.JCheckBox();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -46,33 +47,54 @@ public class TencentGRading extends javax.swing.JFrame {
         jList1 = new javax.swing.JList<>();
         Calculate1 = new javax.swing.JButton();
         Calculate2 = new javax.swing.JButton();
-        Calculate3 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
 
         jTextField1.setText("jTextField1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel1.setLayout(null);
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Object Oriented Programming", "Linear Algebraic Mathematics", "Islam Religion", "Database Design" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
             }
         });
+        jPanel1.add(jComboBox1);
+        jComboBox1.setBounds(160, 50, 400, 30);
 
         jLabel1.setText("Course");
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(100, 50, 60, 30);
+        jPanel1.add(jTextField2);
+        jTextField2.setBounds(227, 154, 90, 26);
+        jPanel1.add(jTextField3);
+        jTextField3.setBounds(227, 225, 90, 26);
+        jPanel1.add(jTextField4);
+        jTextField4.setBounds(227, 292, 90, 26);
+        jPanel1.add(jTextField5);
+        jTextField5.setBounds(456, 154, 90, 26);
+        jPanel1.add(jTextField6);
+        jTextField6.setBounds(456, 225, 90, 26);
+        jPanel1.add(jTextField7);
+        jTextField7.setBounds(456, 292, 90, 26);
 
-        Percentage.setText("Percentage");
-        Percentage.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PercentageActionPerformed(evt);
-            }
-        });
-
-        jLabel2.setText("Assignment");
+        jLabel2.setText("Percentage");
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(370, 290, 90, 30);
 
         jLabel3.setText("Mid");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(107, 228, 25, 20);
 
         jLabel4.setText("Finale");
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(107, 295, 41, 20);
 
         Calculate.setText("Calculate");
         Calculate.addActionListener(new java.awt.event.ActionListener() {
@@ -80,6 +102,8 @@ public class TencentGRading extends javax.swing.JFrame {
                 CalculateActionPerformed(evt);
             }
         });
+        jPanel1.add(Calculate);
+        Calculate.setBounds(342, 359, 95, 29);
 
         jList1.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "List Box"};
@@ -88,12 +112,17 @@ public class TencentGRading extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jList1);
 
+        jPanel1.add(jScrollPane1);
+        jScrollPane1.setBounds(117, 417, 309, 130);
+
         Calculate1.setText("Remove");
         Calculate1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Calculate1ActionPerformed(evt);
             }
         });
+        jPanel1.add(Calculate1);
+        Calculate1.setBounds(440, 450, 89, 29);
 
         Calculate2.setText("Clear");
         Calculate2.addActionListener(new java.awt.event.ActionListener() {
@@ -101,140 +130,41 @@ public class TencentGRading extends javax.swing.JFrame {
                 Calculate2ActionPerformed(evt);
             }
         });
+        jPanel1.add(Calculate2);
+        Calculate2.setBounds(440, 500, 69, 29);
 
-        Calculate3.setText("History");
-        Calculate3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Calculate3ActionPerformed(evt);
-            }
-        });
+        jLabel5.setText("Assignment");
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(107, 157, 83, 20);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(Calculate)
-                .addGap(278, 278, 278))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(188, 188, 188)
-                        .addComponent(jLabel1)
-                        .addGap(29, 29, 29)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(107, 107, 107)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4))
-                        .addGap(37, 37, 37)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(139, 139, 139)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Percentage)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(117, 117, 117)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Calculate1)
-                            .addComponent(Calculate2)
-                            .addComponent(Calculate3))))
-                .addContainerGap(138, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
-                .addGap(52, 52, 52)
-                .addComponent(Percentage)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2))
-                        .addGap(45, 45, 45)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3))
-                        .addGap(41, 41, 41)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(45, 45, 45)
-                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(41, 41, 41)
-                        .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
-                .addComponent(Calculate)
-                .addGap(29, 29, 29)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(Calculate1)
-                        .addGap(18, 18, 18)
-                        .addComponent(Calculate2)
-                        .addGap(18, 18, 18)
-                        .addComponent(Calculate3)
-                        .addGap(11, 11, 11)))
-                .addGap(21, 21, 21))
-        );
+        jLabel6.setText("Percentage");
+        jPanel1.add(jLabel6);
+        jLabel6.setBounds(370, 150, 90, 30);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(18, 18, 18))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        jLabel7.setText("Percentage");
+        jPanel1.add(jLabel7);
+        jLabel7.setBounds(370, 220, 90, 30);
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 630));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
-
-    private void PercentageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PercentageActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PercentageActionPerformed
-
-    private void CalculateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalculateActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CalculateActionPerformed
 
     private void Calculate1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Calculate1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Calculate1ActionPerformed
 
+    private void CalculateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalculateActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CalculateActionPerformed
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+
     private void Calculate2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Calculate2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Calculate2ActionPerformed
-
-    private void Calculate3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Calculate3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Calculate3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -275,13 +205,14 @@ public class TencentGRading extends javax.swing.JFrame {
     private javax.swing.JButton Calculate;
     private javax.swing.JButton Calculate1;
     private javax.swing.JButton Calculate2;
-    private javax.swing.JButton Calculate3;
-    private javax.swing.JCheckBox Percentage;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JList<String> jList1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
