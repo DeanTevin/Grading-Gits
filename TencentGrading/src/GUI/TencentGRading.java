@@ -71,18 +71,24 @@ public class TencentGRading extends javax.swing.JFrame {
         jLabel1.setText("Course");
         jPanel1.add(jLabel1);
         jLabel1.setBounds(100, 50, 60, 30);
+
+        jTextField2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField2KeyTyped(evt);
+            }
+        });
         jPanel1.add(jTextField2);
-        jTextField2.setBounds(227, 154, 90, 26);
+        jTextField2.setBounds(227, 154, 90, 20);
         jPanel1.add(jTextField3);
-        jTextField3.setBounds(227, 225, 90, 26);
+        jTextField3.setBounds(227, 225, 90, 20);
         jPanel1.add(jTextField4);
-        jTextField4.setBounds(227, 292, 90, 26);
+        jTextField4.setBounds(227, 292, 90, 20);
         jPanel1.add(jTextField5);
-        jTextField5.setBounds(456, 154, 90, 26);
+        jTextField5.setBounds(456, 154, 90, 20);
         jPanel1.add(jTextField6);
-        jTextField6.setBounds(456, 225, 90, 26);
+        jTextField6.setBounds(456, 225, 90, 20);
         jPanel1.add(jTextField7);
-        jTextField7.setBounds(456, 292, 90, 26);
+        jTextField7.setBounds(456, 292, 90, 20);
 
         jLabel2.setText("Percentage");
         jPanel1.add(jLabel2);
@@ -90,11 +96,11 @@ public class TencentGRading extends javax.swing.JFrame {
 
         jLabel3.setText("Mid");
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(107, 228, 25, 20);
+        jLabel3.setBounds(107, 228, 16, 14);
 
         jLabel4.setText("Finale");
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(107, 295, 41, 20);
+        jLabel4.setBounds(107, 295, 28, 14);
 
         Calculate.setText("Calculate");
         Calculate.addActionListener(new java.awt.event.ActionListener() {
@@ -103,7 +109,7 @@ public class TencentGRading extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Calculate);
-        Calculate.setBounds(342, 359, 95, 29);
+        Calculate.setBounds(342, 359, 77, 23);
 
         jList1.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "List Box"};
@@ -122,7 +128,7 @@ public class TencentGRading extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Calculate1);
-        Calculate1.setBounds(440, 450, 89, 29);
+        Calculate1.setBounds(440, 450, 71, 23);
 
         Calculate2.setText("Clear");
         Calculate2.addActionListener(new java.awt.event.ActionListener() {
@@ -131,11 +137,11 @@ public class TencentGRading extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Calculate2);
-        Calculate2.setBounds(440, 500, 69, 29);
+        Calculate2.setBounds(440, 500, 57, 23);
 
         jLabel5.setText("Assignment");
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(107, 157, 83, 20);
+        jLabel5.setBounds(107, 157, 55, 14);
 
         jLabel6.setText("Percentage");
         jPanel1.add(jLabel6);
@@ -165,6 +171,14 @@ public class TencentGRading extends javax.swing.JFrame {
     private void Calculate2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Calculate2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Calculate2ActionPerformed
+
+    private void jTextField2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField2KeyTyped
+char c = evt.getKeyChar ();
+        if (!((Character.isDigit (c) || (c == KeyEvent.VK_BACK_SPACE) || (c == KeyEvent.VK_DELETE))))
+        {
+            evt.consume();
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField2KeyTyped
 
     /**
      * @param args the command line arguments
