@@ -6,6 +6,8 @@
 package GUI;
 
 import java.awt.event.KeyEvent;
+import javax.swing.DefaultListModel;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -45,8 +47,8 @@ public class TencentGRading extends javax.swing.JFrame {
         Calculate = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList<>();
-        Calculate1 = new javax.swing.JButton();
-        Calculate2 = new javax.swing.JButton();
+        Remove = new javax.swing.JButton();
+        Clear = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -59,7 +61,7 @@ public class TencentGRading extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(153, 153, 153));
         jPanel1.setLayout(null);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Object Oriented Programming", "Linear Algebraic Mathematics", "Islam Religion", "Database Design" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Course", "Object Oriented Programming", "Linear Algebraic Mathematics", "Islam Religion", "Database Design" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
@@ -78,17 +80,47 @@ public class TencentGRading extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jTextField2);
-        jTextField2.setBounds(227, 154, 90, 20);
+        jTextField2.setBounds(227, 154, 90, 26);
+
+        jTextField3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField3KeyTyped(evt);
+            }
+        });
         jPanel1.add(jTextField3);
-        jTextField3.setBounds(227, 225, 90, 20);
+        jTextField3.setBounds(227, 225, 90, 26);
+
+        jTextField4.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField4KeyTyped(evt);
+            }
+        });
         jPanel1.add(jTextField4);
-        jTextField4.setBounds(227, 292, 90, 20);
+        jTextField4.setBounds(227, 292, 90, 26);
+
+        jTextField5.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField5KeyTyped(evt);
+            }
+        });
         jPanel1.add(jTextField5);
-        jTextField5.setBounds(456, 154, 90, 20);
+        jTextField5.setBounds(456, 154, 90, 26);
+
+        jTextField6.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField6KeyTyped(evt);
+            }
+        });
         jPanel1.add(jTextField6);
-        jTextField6.setBounds(456, 225, 90, 20);
+        jTextField6.setBounds(456, 225, 90, 26);
+
+        jTextField7.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField7KeyTyped(evt);
+            }
+        });
         jPanel1.add(jTextField7);
-        jTextField7.setBounds(456, 292, 90, 20);
+        jTextField7.setBounds(456, 292, 90, 26);
 
         jLabel2.setText("Percentage");
         jPanel1.add(jLabel2);
@@ -96,11 +128,11 @@ public class TencentGRading extends javax.swing.JFrame {
 
         jLabel3.setText("Mid");
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(107, 228, 16, 14);
+        jLabel3.setBounds(107, 228, 25, 20);
 
         jLabel4.setText("Finale");
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(107, 295, 28, 14);
+        jLabel4.setBounds(107, 295, 41, 20);
 
         Calculate.setText("Calculate");
         Calculate.addActionListener(new java.awt.event.ActionListener() {
@@ -109,7 +141,7 @@ public class TencentGRading extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Calculate);
-        Calculate.setBounds(342, 359, 77, 23);
+        Calculate.setBounds(307, 359, 130, 29);
 
         jList1.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "List Box"};
@@ -121,27 +153,27 @@ public class TencentGRading extends javax.swing.JFrame {
         jPanel1.add(jScrollPane1);
         jScrollPane1.setBounds(117, 417, 309, 130);
 
-        Calculate1.setText("Remove");
-        Calculate1.addActionListener(new java.awt.event.ActionListener() {
+        Remove.setText("Remove");
+        Remove.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Calculate1ActionPerformed(evt);
+                RemoveActionPerformed(evt);
             }
         });
-        jPanel1.add(Calculate1);
-        Calculate1.setBounds(440, 450, 71, 23);
+        jPanel1.add(Remove);
+        Remove.setBounds(440, 450, 89, 29);
 
-        Calculate2.setText("Clear");
-        Calculate2.addActionListener(new java.awt.event.ActionListener() {
+        Clear.setText("Clear");
+        Clear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Calculate2ActionPerformed(evt);
+                ClearActionPerformed(evt);
             }
         });
-        jPanel1.add(Calculate2);
-        Calculate2.setBounds(440, 500, 57, 23);
+        jPanel1.add(Clear);
+        Clear.setBounds(440, 500, 69, 29);
 
         jLabel5.setText("Assignment");
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(107, 157, 55, 14);
+        jLabel5.setBounds(107, 157, 83, 20);
 
         jLabel6.setText("Percentage");
         jPanel1.add(jLabel6);
@@ -156,21 +188,61 @@ public class TencentGRading extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Calculate1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Calculate1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Calculate1ActionPerformed
+    DefaultListModel<String> model = new DefaultListModel<>();
+    
+    private void RemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RemoveActionPerformed
+        int selectedIndex = jList1.getSelectedIndex();
+    if (selectedIndex != -1) {
+    model.remove(selectedIndex);
+    }
+    else {
+        JOptionPane.showMessageDialog(null, "No Data Found");
+    }
+    }//GEN-LAST:event_RemoveActionPerformed
 
     private void CalculateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalculateActionPerformed
-        // TODO add your handling code here:
+        int Mid,Assign,Final,ResMid,ResAssign,ResFinal,Result, PerMid, PerAssign, PerFinal;
+       
+        if (jComboBox1.getSelectedIndex()==0) {
+            JOptionPane.showMessageDialog(null, "Please Select Course");
+        }
+        else if(jTextField2.getText().equals("") | jTextField3.getText().equals("") | jTextField4.getText().equals("")
+                | jTextField5.getText().equals("") | jTextField6.getText().equals("") | jTextField7.getText().equals(""))
+        {
+            JOptionPane.showMessageDialog(null, "Please Fill All Forms");
+        }
+        else {
+        Mid = Integer.parseInt(jTextField2.getText());
+        Assign = Integer.parseInt(jTextField3.getText());
+        Final = Integer.parseInt(jTextField4.getText());
+        PerMid = Integer.parseInt(jTextField5.getText());
+        PerAssign = Integer.parseInt(jTextField6.getText());
+        PerFinal = Integer.parseInt(jTextField7.getText());
+        if(PerMid + PerFinal + PerAssign != 100){
+            JOptionPane.showMessageDialog(null, "Sum of all percentage needs to be 100");
+        }
+        else{
+            
+        
+        ResMid = (PerMid * Mid)/100;
+        ResAssign = (PerAssign * Assign)/100;
+        ResFinal = (PerFinal * Final)/100;
+        Result = (ResMid + ResAssign + ResFinal);
+        
+        jList1.setModel(model);
+        model.addElement(jComboBox1.getSelectedItem().toString().trim() +"| Assigment= "+ ResAssign +", Mid= " + ResMid + ", Final= " +ResFinal +", End Result= " +Result);
+        }
+        }
+        
     }//GEN-LAST:event_CalculateActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
-    private void Calculate2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Calculate2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Calculate2ActionPerformed
+    private void ClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClearActionPerformed
+      model.clear();
+    }//GEN-LAST:event_ClearActionPerformed
 
     private void jTextField2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField2KeyTyped
 char c = evt.getKeyChar ();
@@ -179,6 +251,46 @@ char c = evt.getKeyChar ();
             evt.consume();
         }        // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2KeyTyped
+
+    private void jTextField3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField3KeyTyped
+char c = evt.getKeyChar ();
+        if (!((Character.isDigit (c) || (c == KeyEvent.VK_BACK_SPACE) || (c == KeyEvent.VK_DELETE))))
+        {
+            evt.consume();
+        }
+    }//GEN-LAST:event_jTextField3KeyTyped
+
+    private void jTextField4KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField4KeyTyped
+char c = evt.getKeyChar ();
+        if (!((Character.isDigit (c) || (c == KeyEvent.VK_BACK_SPACE) || (c == KeyEvent.VK_DELETE))))
+        {
+            evt.consume();
+        }           // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField4KeyTyped
+
+    private void jTextField5KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField5KeyTyped
+char c = evt.getKeyChar ();
+        if (!((Character.isDigit (c) || (c == KeyEvent.VK_BACK_SPACE) || (c == KeyEvent.VK_DELETE))))
+        {
+            evt.consume();
+        }           // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField5KeyTyped
+
+    private void jTextField6KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField6KeyTyped
+char c = evt.getKeyChar ();
+        if (!((Character.isDigit (c) || (c == KeyEvent.VK_BACK_SPACE) || (c == KeyEvent.VK_DELETE))))
+        {
+            evt.consume();
+        }           // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField6KeyTyped
+
+    private void jTextField7KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField7KeyTyped
+char c = evt.getKeyChar ();
+        if (!((Character.isDigit (c) || (c == KeyEvent.VK_BACK_SPACE) || (c == KeyEvent.VK_DELETE))))
+        {
+            evt.consume();
+        }           // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField7KeyTyped
 
     /**
      * @param args the command line arguments
@@ -211,14 +323,15 @@ char c = evt.getKeyChar ();
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new TencentGRading().setVisible(true);
+                
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Calculate;
-    private javax.swing.JButton Calculate1;
-    private javax.swing.JButton Calculate2;
+    private javax.swing.JButton Clear;
+    private javax.swing.JButton Remove;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
